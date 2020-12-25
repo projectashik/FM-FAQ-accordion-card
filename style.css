@@ -1,0 +1,173 @@
+:root {
+    --dark-d-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    --v-dark-g-blue: hsl(237, 12%, 33%);
+    --dark-g-blue: hsl(240, 6%, 50%);
+    --light-g-blue: hsl(240, 5%, 91%);
+}
+
+* {
+    font-size: 12px;
+    font-family: "Kumbh Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: lightgray;
+    padding: 5px;
+    border-radius: 2px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    background: linear-gradient(
+        to bottom,
+        var(--soft-violet),
+        var(--soft-blue)
+    );
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 130px;
+    background: white;
+    width: 285px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.images {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-women-mbl {
+    top: -88px;
+    position: absolute;
+    margin-left: -10px;
+}
+
+.image-pattern-mbl,
+.image-women-mbl {
+    width: 210px;
+}
+
+.faq {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--dark-d-blue);
+    text-align: center;
+    margin: 39px;
+}
+
+.faq-collection {
+    padding: 0 20px 45px 20px;
+}
+
+details {
+    border-bottom: 1px solid var(--light-g-blue);
+}
+
+details[open] summary::-webkit-details-marker {
+    transform: rotate(180deg);
+}
+
+details[open] summary {
+    font-weight: 700;
+}
+
+summary:focus {
+    outline: none;
+}
+
+summary {
+    padding: 18px 0;
+    cursor: pointer;
+    color: var(--dark-d-blue);
+    font-weight: 400;
+    position: relative;
+}
+
+summary::-webkit-details-marker {
+    background: url("images/icon-arrow-down.svg") center no-repeat;
+    color: transparent;
+    position: absolute;
+    right: 0;
+}
+
+details .content {
+    padding: 0 0 16px 0;
+    color: var(--dark-g-blue);
+}
+
+.image-women,
+.image-pattern,
+.a-image {
+    display: none;
+}
+
+@media (min-width: 1080px) {
+    .container {
+        width: 700px;
+        display: flex;
+    }
+
+    .images {
+        overflow: hidden;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main {
+        width: 50%;
+    }
+    .image-women,
+    .image-pattern {
+        width: 100%;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .a-image {
+        display: block;
+        position: relative;
+    }
+
+    .image-a {
+        position: absolute;
+        z-index: 20;
+        top: 37%;
+        left: -100px;
+    }
+
+    .image-women {
+        position: absolute;
+        left: -60px;
+    }
+
+    .image-women-mbl,
+    .image-pattern-mbl {
+        display: none;
+    }
+}
